@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu';
+  font-size: x-large;
+  text-align: center;
+  background: #1f1f1f;
+  color: #f1f1f1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.App {
+  margin: 1rem auto;
+  padding: 1rem auto;
+  max-width: 600px;
+}
+.counterone {
+  margin: 1rem;
+  padding: 1rem;
+  color: #f1f1f1;
+  border: 2px solid #f1f1f1;
+}
+.counterone button {
+  background: #50c878;
+  border: 0;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.counterone div {
+  margin: 1rem;
+  padding: 1rem;
+  font-size: 2rem;
+}
