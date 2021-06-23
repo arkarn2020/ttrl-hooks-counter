@@ -1,4 +1,5 @@
-import React, { useReducer, useContext } from 'react';
+import React, { useReducer, useContext, useState } from 'react';
+import { UserContext } from '../contexts/UserContext';
 import { CountContext } from '../contexts/CountContext';
 
 const initialState = {
@@ -25,7 +26,17 @@ const reducer = (state, action) => {
 
 const CounterTwo = () => {
   const [count, dispatch] = useReducer(reducer, initialState);
+  const { user, toggleUser } = useContext(UserContext);
   const { countState, countDispatch } = useContext(CountContext);
+  const [name, setName] = useState('john');
+
+  const toggleName = () => {
+    if (name !== 'john') {
+      setName('john');
+    } else {
+      setName('doe');
+    }
+  };
 
   return (
     <div className="counterone">
@@ -60,6 +71,17 @@ const CounterTwo = () => {
           <p>second local counter</p>
           {count.secondCounter}
         </p>
+      </div>
+      {/* UserContext */}
+      <p>global user context</p>
+      <div>
+        {user}
+        <button onClick={toggleUser}>toggle</button>
+      </div>
+      <p>local user </p>
+      <div>
+        {name}
+        <button onClick={() => toggleName()}>toggle</button>
       </div>
       <p>global counter </p>
       <p>Z {countState.counterz}</p>

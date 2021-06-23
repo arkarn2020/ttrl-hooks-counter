@@ -1,4 +1,5 @@
 import { CountContext } from '../contexts/CountContext';
+
 import { useContext } from 'react';
 
 const CounterOne = () => {
